@@ -1,5 +1,5 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-a11y/recommended", "stylelint-config-prettier"],
+  "extends": ["stylelint-config-standard", "stylelint-config-styled-components", "stylelint-a11y/recommended", "stylelint-config-prettier"],
   "plugins": [
     "stylelint-order",
     "stylelint-prettier",
@@ -8,6 +8,9 @@
   "customSyntax": "@stylelint/postcss-css-in-js",
   "plugin/no-unsupported-browser-features": true,
   "rules": {
+    "function-no-unknown": {
+      "ignoreFunctions": ["${"]
+    },
     "max-nesting-depth": 2,
     "order/order": [
       [

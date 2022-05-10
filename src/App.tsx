@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Header = styled.header`
-  font-size: 20px;
-  color: green;
+  background-color: ${(props) => props.theme.palette.primary.main};
 `;
 
 function App() {
