@@ -1,22 +1,28 @@
 import React from 'react';
-import styled from 'styled-components';
+import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from 'styled-components';
+import { BrowserRouter } from 'react-router-dom';
+import { CssBaseline, StyledEngineProvider } from '@mui/material';
 
-const Header = styled.header`
-  background-color: ${(props) => props.theme.palette.primary.main};
-`;
+// service
+import AppRouter from 'service/router/Router';
+
+// styles
+import theme from 'styles/theme/theme';
 
 function App() {
   return (
-    <div className="App">
-      <Header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </Header>
-    </div>
+    <StyledEngineProvider injectFirst>
+      <MuiThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
+          <BrowserRouter>
+            <AppRouter />
+
+            <CssBaseline />
+          </BrowserRouter>
+        </ThemeProvider>
+      </MuiThemeProvider>
+    </StyledEngineProvider>
   );
 }
 
