@@ -8,6 +8,7 @@
   "customSyntax": "@stylelint/postcss-css-in-js",
   "plugin/no-unsupported-browser-features": true,
   "rules": {
+    "a11y/media-prefers-reduced-motion": 0,
     "function-no-unknown": {
       "ignoreFunctions": ["${"]
     },

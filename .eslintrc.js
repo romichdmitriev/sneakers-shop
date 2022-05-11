@@ -33,6 +33,7 @@ module.exports = {
     {
       files: ['**/*.ts?(x)'],
       rules: {
+        'react/jsx-props-no-spreading': 1,
         'import/no-extraneous-dependencies': 'off',
         'no-shadow': 'off',
         '@typescript-eslint/no-unused-vars': 1,
