@@ -9,6 +9,7 @@ import AppRouter from 'service/router/Router';
 
 // styles
 import theme from 'styles/theme/theme';
+import GlobalStyle from 'styles';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <AppRouter />
 
             <CssBaseline />
+            <GlobalStyle />
           </BrowserRouter>
         </ThemeProvider>
       </MuiThemeProvider>
