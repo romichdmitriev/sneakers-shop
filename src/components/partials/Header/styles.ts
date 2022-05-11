@@ -28,6 +28,8 @@ export const StyledContainer = styled(ContentWrapper)`
 
 /* Burger Menu */
 export const MobileIconButton = styled(IconButton)`
+  color: ${(props) => props.theme.palette.primary.dark};
+
   ${(props) => props.theme.breakpoints.up('md')} {
     display: none;
   }

@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 // styled components
 import * as Styles from 'components/partials/Header/styles';
-import { IconButton, Grid, Divider, Typography, MenuItem } from '@mui/material';
+import { Badge, Divider, Grid, IconButton, MenuItem, Typography } from '@mui/material';
 
 // assets
 import { ReactComponent as Logo } from 'assets/icons/logo.svg';
@@ -22,7 +22,10 @@ import { RouterService } from 'service/router/Router';
 import CLOTHES_TYPES from 'utils/datasets';
 
 const Header: FC = () => {
+  // check active navigation menu item
   const location = useLocation();
+
+  // check active navigation menu tab
   const [activeTab, setActiveTab] = useState(CLOTHES_TYPES[0].value);
 
   const handleOnChangeTab = (tab: string) => () => {
@@ -95,9 +98,14 @@ const Header: FC = () => {
           </Grid>
 
           <Grid item>
-            <IconButton sx={{ width: 36 }}>
-              <Cart />
-            </IconButton>
+            <Link to={RouterService.cart}>
+              <IconButton sx={{ width: 36 }}>
+                {/* TODO add count of products in cart */}
+                <Badge badgeContent={4} color="secondary">
+                  <Cart />
+                </Badge>
+              </IconButton>
+            </Link>
           </Grid>
         </Grid>
 
