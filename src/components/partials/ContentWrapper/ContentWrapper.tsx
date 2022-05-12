@@ -14,7 +14,7 @@ const StyledContainer = styled(Container)<{ height?: number; isContentCenterOnly
   justify-content: space-between;
   max-width: calc(${(props) => props.theme.breakpoints.values.xl}px - 40px);
   height: ${(props) => (props.height ? `${props.height}px` : 'unset')};
-  padding: ${(props) => (props.iscontentcenteronly ? '0 20px' : '128px 20px 20px')};
+  padding: ${(props) => (props.isContentCenterOnly ? '0 20px' : '128px 20px 20px')};
   margin: 0 auto;
 
   ${(props) => props.theme.breakpoints.only('xs')} {
@@ -23,7 +23,7 @@ const StyledContainer = styled(Container)<{ height?: number; isContentCenterOnly
 
   ${(props) => props.theme.breakpoints.down('md')} {
     max-width: calc(${(props) => props.theme.breakpoints.values.md}px - 40px);
-    padding: ${(props) => (props.iscontentcenteronly ? '0 20px' : '128px 20px 80px')};
+    padding: ${(props) => (props.isContentCenterOnly ? '0 20px' : '128px 20px 80px')};
   }
 
   ${(props) => props.theme.breakpoints.only('lg')} {
