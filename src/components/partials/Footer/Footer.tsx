@@ -23,6 +23,7 @@ const StyledFooter = styled.footer`
   position: fixed;
   bottom: 0;
   left: 0;
+  z-index: 10;
   width: 100%;
   min-height: 60px;
 
@@ -34,6 +35,7 @@ const StyledFooter = styled.footer`
 const StyledGridItem = styled(Grid)<{ active?: boolean }>`
   align-items: center;
 
+  /*  stylelint-disable-next-line */
   & .MuiIconButton-root {
     color: ${(props) => (props.active ? props.theme.palette.secondary.main : props.theme.palette.primary.dark)};
   }
@@ -41,6 +43,8 @@ const StyledGridItem = styled(Grid)<{ active?: boolean }>`
   ${(props) => (props.active ? tabBottomLine : '')};
 
   &::after {
+    top: -3px;
+    bottom: unset;
     height: 3px;
     background-color: ${(props) => props.theme.palette.secondary.main};
 
