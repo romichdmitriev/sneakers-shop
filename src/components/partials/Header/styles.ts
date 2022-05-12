@@ -12,18 +12,17 @@ export const StyledHeader = styled.header`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10;
   width: 100%;
   min-height: 108px;
+  background-color: ${(props) => props.theme.palette.background.default};
+  border: 2px solid #ebebf0;
 `;
 
 export const StyledContainer = styled(ContentWrapper)`
   position: relative;
   display: flex;
   justify-content: space-between;
-
-  && {
-    background-color: ${(props) => props.theme.palette.background.default};
-  }
 `;
 
 /* Burger Menu */

@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material';
 
-const pallete = {
+export const pallete = {
   black: '#000',
   blue: {
     100: '#0A1734',

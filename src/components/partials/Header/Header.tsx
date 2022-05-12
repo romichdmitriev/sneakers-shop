@@ -119,7 +119,7 @@ const Header: FC = () => {
           {CLOTHES_TYPES.map((item) => (
             <Styles.SubNavMenuTab
               key={`subnav-tab-${item.value}`}
-              active={activeTab === item.value}
+              active={activeTab === item.value && RouterService.home === location.pathname}
               onClick={handleOnChangeTab(item.value)}
             >
               <Typography variant="body1" paragraph>
