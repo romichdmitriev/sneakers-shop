@@ -8,10 +8,10 @@
   "customSyntax": "@stylelint/postcss-css-in-js",
   "plugin/no-unsupported-browser-features": true,
   "rules": {
-    "a11y/media-prefers-reduced-motion": 0,
-    "function-no-unknown": {
+    "a11y/media-prefers-reduced-motion": null,
+    "function-no-unknown": [true, {
       "ignoreFunctions": ["${"]
-    },
+    }],
     "max-nesting-depth": 2,
     "order/order": [
       [
