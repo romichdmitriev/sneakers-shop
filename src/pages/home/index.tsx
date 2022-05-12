@@ -1,15 +1,13 @@
 import React from 'react';
 
 // components
-import Header from 'components/partials/Header/Header';
-import Footer from 'components/partials/Footer/Footer';
+import ProductCardList from 'containers/blocks/ProductCardList/ProductCardList';
+import PageLayout from 'containers/layouts/PageLayout/PageLayout';
 
 const HomePage = () => (
-  <div>
-    <Header />
-
-    <Footer />
-  </div>
+  <PageLayout>
+    <ProductCardList />
+  </PageLayout>
 );
 
 export default HomePage;
